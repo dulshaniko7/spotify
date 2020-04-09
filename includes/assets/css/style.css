@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to left, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.2)), url("../images/login.jpg");
+    background-position: center;
+    background-size: cover;
+
+}
+
+.inputContainer {
+    display: grid;
+    color: white;
+    grid-template-areas: 'form wording';
+
+    grid-auto-columns: 1fr 1fr;
+
+}
+
+.forms {
+    grid-area: form;
+    border-right: solid gray 2px;
+    padding: 7rem 2rem 1rem 5rem;
+}
+
+.forms h2 {
+    margin-bottom: 5%;
+    width: 60%;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.forms label {
+    color: #29293d;
+    margin-bottom: 1px;
+}
+
+.inputReg {
+    border: none;
+    border-bottom: .5px solid white;
+    padding: 7px 0;
+    background: transparent;
+    font-family: 'Comic Neue', cursive;
+    width: 70%;
+    margin: 1px 0;
+    display: block;
+    color: white;
+    outline: none;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+input[type=submit] {
+    border: white solid .5px;
+    background: transparent;
+    border-radius: 20rem;
+    width: 70%;
+    padding: .5rem .5rem;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 1.5rem auto 1rem auto;
+}
+
+p {
+    font-size: .8rem;
+    margin-bottom: 2rem;
+}
+
+.wording {
+    grid-area: wording;
+    padding: 7rem 2rem 1rem 5rem;
+}
+
+.wording h2 {
+    letter-spacing: 1px;
+    font-weight: 400;
+
+}
+
+.wording h1 {
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 60px;
+    width: 90%;
+
+    color: forestgreen;
+}
+
+.wording h4 {
+    margin-top: 1rem;
+    font-size: 30px;
+    width: 90%;
+    color: white;
+    font-weight: 400;
+}
+
+ul {
+    list-style: circle;
+    margin-top: 1rem;
+    font-size: 20px;
+
+}
+
+ul li {
+    margin-top: 1rem;
+
+}
+
+h3 {
+    font-size: 15px;
+    color: red;
+}
+
+.error {
+     color: red;
+ }

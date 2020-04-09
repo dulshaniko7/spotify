@@ -12,28 +12,36 @@ const passwordConfirm = document.querySelector('#passwordConfirm');
 
 const submitR = document.querySelector("#submitR");
 
-
+const loginForm = document.querySelector('#loginForm');
+const regForm = document.querySelector('#registerForm');
 const loginSubmit = document.querySelector("#login");
-
-
+const hideLogin = document.querySelector("#hideLogin");
 let error = 0;
 let usernameError = true;
 let emailError = true;
 let passwordError = true;
+let h2 = document.querySelector('#h2');
+regForm.style.display = "none";
 
+hideLogin.addEventListener('click', function () {
+    regForm.style.display = "block";
+    loginForm.style.display = "none";
+});
+
+//usernameR.classList.add("error");
 
 usernameR.addEventListener('keyup', evt => {
 
         if (usernamePattern.test(evt.target.value)) {
-            usernameR.setAttribute('class', 'success');
+            usernameR.classList.remove("error");
         }
         else {
-            usernameR.setAttribute('class', 'error');
+            usernameR.classList.add("error");
         }
     }
 );
 
-usernameR.addEventListener('blur', evt => {
+usernameR.addEventListener('blur', function () {
         if (!usernamePattern.test(usernameR.value)) {
             usernameError = true;
             submitR.disabled = true;
@@ -49,16 +57,17 @@ usernameR.addEventListener('blur', evt => {
 );
 emailR.addEventListener('keyup', evt => {
     if (emailPattern.test(evt.target.value)) {
-        emailR.setAttribute('class', 'success');
 
+        emailR.classList.remove("error");
     }
     else {
-        emailR.setAttribute('class', 'error');
+        emailR.classList.add("error");
 
     }
 });
 
-emailR.addEventListener('blur', evt => {
+emailR.addEventListener('blur', function () {
+
     if (!emailPattern.test(emailR.value)) {
         emailError = true;
         submitR.disabled = true;
@@ -75,23 +84,25 @@ emailR.addEventListener('blur', evt => {
 
 function passwordCheck() {
     if (passwordR.value == passwordConfirm.value) {
-        passwordConfirm.setAttribute('class', 'success');
+        passwordConfirm.classList.remove("error");
     }
     else {
-        passwordConfirm.setAttribute('class', 'error');
 
+        passwordConfirm.classList.add("error");
     }
 }
 
 function passwordConfirmCheck() {
     if (passwordR.value == passwordConfirm.value) {
-        passwordConfirm.setAttribute('class', 'success');
+
+        passwordConfirm.classList.remove("error")
         passwordError = false;
         submitR.disabled = false;
         return true;
     }
     else {
         passwordConfirm.setAttribute('class', 'error');
+        passwordConfirm.classList.add("error");
         passwordError = true;
         submitR.disabled = true;
         return false;
@@ -99,12 +110,13 @@ function passwordConfirmCheck() {
     }
 }
 
-passwordConfirm.addEventListener('blur', evt => {
+passwordConfirm.addEventListener('blur', function () {
+
     if (usernameError || emailError || passwordError) {
-        console.log(usernameError);
-        console.log(emailError);
-        console.log(passwordError);
-        alert("submit press -error count " + error);
+        console.log("usernameError " + usernameError);
+        console.log("emailError " + emailError);
+        console.log("passwordError " + passwordError);
+        alert("submit press -error count ");
     }
     else {
         console.log("submit ok");
@@ -115,6 +127,7 @@ passwordConfirm.addEventListener('blur', evt => {
 function test() {
     alert("test");
 }
+
 
 
 
