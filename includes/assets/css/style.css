@@ -7,13 +7,13 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to left, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.2)), url("../images/login.jpg");
-    background-position: center;
-    background-size: cover;
 
 }
 
 .inputContainer {
+    background: linear-gradient(to left, rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.2)), url("../images/login.jpg");
+    background-position: center;
+    background-size: cover;
     display: grid;
     color: white;
     grid-template-areas: 'form wording';
@@ -119,5 +119,208 @@ h3 {
 }
 
 .error {
-     color: red;
- }
+    color: red;
+}
+
+<!--
+
+-->
+.home {
+    display: grid;
+    grid-template-rows: 6fr 2fr;
+    height: 100vh;
+    background: #0f0f0a;
+
+}
+
+.top {
+    background: #0f0f0a;
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+}
+.mainArea {
+    background: #0f0f0a;
+    color: white;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: 2fr 5fr;
+    grid-template-columns: 1fr;
+
+}
+.mainHeading{
+
+
+}
+.mainAlbum{
+    margin: auto 2rem;
+
+}
+.mainAlbum img{
+    width: 200px;
+    height: 200px;
+    margin-right:1rem ;
+}
+.mainAlbumFrame{
+    margin: auto auto;
+}
+.mainAlbumFrame img{
+    width: 50%;
+    margin: auto auto;
+}
+
+.nav {
+    background: #0f0f0a;
+    color: white;
+}
+
+.nav-items {
+
+    padding-left: 1.5rem;
+    list-style: none;
+    font-size: 25px;
+}
+
+.navs {
+    margin: 2rem auto;
+    width: 90%;
+}
+
+.navs:nth-of-type(2) {
+
+    border-bottom: solid 1px white;
+    border-top: solid 1px white;
+    line-height: 5rem;
+}
+
+.player {
+    display: grid;
+    background: #1a1a1a;
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-rows: 1fr;
+}
+
+.controlButton {
+
+    background-color: transparent;
+    border: none;
+    margin-top: 2rem;
+    vertical-align: middle;
+
+}
+
+.logo {
+    background-color: transparent;
+    border: none;
+
+    vertical-align: middle;
+}
+
+.controlButton:hover {
+    cursor: pointer;
+}
+
+.controlButton img {
+    width: 40%;
+    height: 40%;
+
+}
+
+.controlButton:nth-child(3) img {
+    width: 65%;
+    height: 65%;
+}
+
+.controlButton:nth-child(4) img {
+    width: 65%;
+    height: 65%;
+}
+
+.buttons {
+    text-align: center;
+}
+
+.pause {
+    display: none;
+}
+
+.albumMin {
+    width: 30%;
+    float: left;
+}
+
+.albumMinName {
+
+    color: gray;
+    font-size: 1.5rem;
+    display: block;
+    margin-top: 1rem;
+    margin-left: 7rem;
+
+}
+
+.inline {
+
+}
+
+.albumMinArtist {
+    color: gray;
+    font-size: medium;
+    margin-left: 7rem;
+}
+
+.playerMid {
+    background: #1a1a1a;
+
+}
+
+.bar {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+
+    margin-top: 2rem;
+    color: gray;
+    font-weight: 100;
+    font-size: small;
+}
+
+.progress {
+    width: 100%;
+
+    margin-top: 3px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.progressBack {
+    background-color: #404040;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.progressFront {
+    background-color: #a0a0a0;
+    height: 4px;
+    width: 0;
+    border-radius: 4px;
+}
+
+.volume {
+    margin-left: 2rem;
+
+}
+
+.progressVBack {
+
+    background-color: #404040;
+    height: 4px;
+    width: 50%;
+    border-radius: 4px;
+}
+
+<!--
+-->
+
+

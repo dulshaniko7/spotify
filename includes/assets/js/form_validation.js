@@ -1,3 +1,4 @@
+
 const registerForm = document.querySelector('#registerForm');
 const usernamePattern = /^[a-zA-Z][a-zA-Z0-9,.@#]{6,12}$/
 
@@ -20,13 +21,14 @@ let error = 0;
 let usernameError = true;
 let emailError = true;
 let passwordError = true;
-let h2 = document.querySelector('#h2');
+//let h1 = document.querySelector('#h2');
 regForm.style.display = "none";
-
+//h.style.display = "none";
 hideLogin.addEventListener('click', function () {
     regForm.style.display = "block";
     loginForm.style.display = "none";
 });
+
 
 //usernameR.classList.add("error");
 
@@ -128,7 +130,19 @@ function test() {
     alert("test");
 }
 
+const play = document.querySelector('.play');
+const pause = document.querySelector('.pause');
 
+play.addEventListener("click", function () {
+
+    play.style.display = "none";
+    pause.style.display = "block";
+});
+
+pause.addEventListener("click", function () {
+    pause.style.display = "none";
+    play.style.display = "block"
+})
 
 
 

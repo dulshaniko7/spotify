@@ -39,7 +39,8 @@ include_once "includes/login-handler.php";
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" placeholder="nimmi" required class="inputReg"><br>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" placeholder="password" class="inputReg" required><br>
+                <input type="password" id="password" name="password" placeholder="password" class="inputReg"
+                       required><br>
                 <input type="submit" value="Login" id="login" name="login">
                 <p><span id="hideLogin">Don't have an account yet? Signup here.</span></p>
                 <h3><?php echo $account->errorMsg ?></h3>
@@ -51,12 +52,14 @@ include_once "includes/login-handler.php";
                 <label for="username">Username:</label><br>
                 <input type="text" name="username" id="usernameR" placeholder="nimmi" class="inputReg" required><br>
                 <label for="email">Email:</label><br>
-                <input type="email" name="email" id="emailR" placeholder="nimmi@gmail.com" class="inputReg" required><br>
+                <input type="email" name="email" id="emailR" placeholder="nimmi@gmail.com" class="inputReg"
+                       required><br>
                 <label for="password">Password:</label><br>
                 <input type="password" name="password" id="passwordR" class="inputReg" required placeholder="password"
                        onkeyup="passwordCheck()"><br><br>
                 <label for="password">Confirm Password:</label><br>
-                <input type="password" name="confirmPassword" id="passwordConfirm" class="inputReg" required onkeyup="passwordCheck()"
+                <input type="password" name="confirmPassword" id="passwordConfirm" class="inputReg" required
+                       onkeyup="passwordCheck()"
                        onblur="passwordConfirmCheck()"><br><br>
                 <input type="submit" value="Register" name="register" id="submitR">
             </form>
